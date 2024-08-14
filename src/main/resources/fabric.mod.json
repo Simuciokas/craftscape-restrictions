@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "craftscape-restrictions",
+	"version": "${version}",
+	"name": "CraftScape-Restrictions",
+	"description": "CraftScape Restrictions",
+	"authors": [
+		"Simuciokas"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/craftscape-restrictions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"uk.simuciokas.CraftScapeRestrictions"
+		],
+		"client": [
+			"uk.simuciokas.CraftScapeRestrictionsClient"
+		]
+	},
+	"mixins": [
+		"craftscape-restrictions.mixins.json",
+		{
+			"config": "craftscape-restrictions.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
